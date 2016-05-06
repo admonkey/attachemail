@@ -12,7 +12,6 @@ function mail_attachment($files, $path, $mailto, $mailcc, $from_mail, $from_name
   $header .= "--$uid\r\n";
   $header .= "Content-type:text/html; charset=iso-8859-1\r\n";
   $header .= 'X-Mailer: PHP/' . phpversion() ."\r\n\r\n";;
-  $header .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
   $header .= "$message\r\n\r\n";
 
       foreach ($files as $filename) { 
@@ -41,7 +40,7 @@ $email_cc = "jeffpuckett2@gmail.com";
 $email_from = "administrator@waltahr.uark.edu";
 $email_from_name = "Admin";
 
-$email_subject = "Meaningful Content";
+$email_subject = "More Meaningful Content";
 $email_message = "
   <html><body>
     <p>Here's some profound email message.</p>
